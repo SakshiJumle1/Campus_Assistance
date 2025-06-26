@@ -1,0 +1,84 @@
+/* General body styling with a background image */
+body {
+    font-family: 'Roboto', Arial, sans-serif; /* Modern font, fallback to Arial */
+    text-align: center;
+    padding: 50px;
+    background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3'); /* Campus-themed background */
+    background-size: cover; /* Ensures image covers the entire background */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Keeps background fixed on scroll */
+    color: #333; /* Dark text for readability */
+    min-height: 100vh; /* Ensures body takes full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+}
+
+/* Chatbox container with a semi-transparent card effect */
+#chatbox {
+    width: 100%;
+    max-width: 400px; /* Slightly wider for better usability */
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9); /* White with transparency for contrast */
+    border-radius: 15px; /* Rounded corners for a modern look */
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Input field styling */
+#question {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #6200ea; /* Vibrant purple border */
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box; /* Ensures padding doesn’t affect width */
+    transition: border-color 0.3s ease; /* Smooth border color change */
+}
+
+#question:focus {
+    outline: none;
+    border-color: #3700b3; /* Darker purple on focus */
+}
+
+/* Button styling */
+#ask-btn {
+    padding: 12px 30px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #6200ea, #b388ff); /* Gradient for a dynamic look */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effects */
+}
+
+#ask-btn:hover {
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+/* Response area styling */
+#response {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #1a237e; /* Deep blue for responses */
+    background: rgba(227, 242, 253, 0.8); /* Light blue background for contrast */
+    padding: 15px;
+    border-radius: 10px;
+    line-height: 1.5; /* Better readability */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+
+    #chatbox {
+        max-width: 100%; /* Full width on smaller screens */
+        padding: 15px;
+    }
+}
